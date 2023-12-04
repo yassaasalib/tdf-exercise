@@ -15,16 +15,12 @@
 
   <label for="sortOrder">Sort Order:</label>
 
-  <!-- <select id="sortOrder" [(ngModel)]="sortOrder">
-    <option value="asc">Ascending</option>
-    <option value="desc">Descending</option>
-  </select> -->
   <mat-form-field>
     <mat-label>Sort Order:</mat-label>
-    <mat-select [(ngModel)]="sortOrder">
+    <mat-select [(ngModel)]="sortOrder"(ngModelChange)="sortValues()">
       <mat-option value="asc">Ascending</mat-option>
       <mat-option value="desc">Descending</mat-option>
     </mat-select>
   </mat-form-field>
-  <button (click)="sortValues()">Sort Values</button>
+  <!-- <button (click)="sortValues()">Sort Values</button> -->
 </ng-container>
