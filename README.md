@@ -1,27 +1,79 @@
-# TdfExercise
+# Dynamic Input Sort App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+## How to Use
 
-## Development server
+### Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Node.js and npm installed on your machine.
+2. Angular CLI globally installed. Run `npm install -g @angular/cli` if not installed.
 
-## Code scaffolding
+### Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the Repository:
 
-## Build
+```bash
+git clone git@github.com:yassaasalib/tdf-exercise.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Navigate to the Project Directory:
 
-## Running unit tests
+```bash
+cd tdf-exercise
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Install Dependencies:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Run the Application
 
-## Further help
+1. Start the Development Server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng serve
+```
+
+2. Open Your Browser:
+
+Open your web browser and navigate to http://localhost:4200/.
+
+## How to Use the App
+
+### Enter the Number of Inputs:
+
+1. Enter a numeric value in the "Enter the number of inputs" field.
+
+2. Click the "Generate Inputs" button.
+
+### Fill in Input Values:
+
+1. Fill in the dynamically generated input boxes with your desired values.
+
+### Sort the Values:
+
+1. Choose the desired sort order (Ascending or Descending) from the dropdown menu.
+
+2. The input values will be sorted automatically as soon as you make a selection.
+
+## Code Explanation
+
+### app.component.ts
+
+- Contains the main component logic, including the generation of input boxes, sorting functionality, and event handling.
+
+### app.component.html
+
+- Defines the HTML template for the application, including input fields, buttons, and the dynamically generated input boxes.
+
+### sort.service.ts
+
+- A service that provides sorting functions for values, including ascending and descending order.
+- Uses a custom comparison function based on the types of values.
+
+## Notes
+
+- The application uses Angular two-way data binding with ngModel for real-time updates.
+- Input values can be numeric, text (strings), or a mix of both.
+- Sorting is triggered automatically when the user selects a sort order from the dropdown menu.
