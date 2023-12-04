@@ -1,17 +1,13 @@
-<div id="number__of--inputs-holder">
-  <label for="numberOfInputs">Enter the number of inputs:</label>
-  <input type="number" id="numberOfInputs" [(ngModel)]="numberOfInputs" pattern="[0-9]*" />
-  <button (click)="generateInputs()">Generate Inputs</button>
-</div>
+<label for="numberOfInputs">Enter the number of inputs:</label>
+<input type="number" id="numberOfInputs" [(ngModel)]="numberOfInputs" pattern="[0-9]*" />
+<button (click)="generateInputs()">Generate Inputs</button>
 
 
 <ng-container *ngIf="inputValues.length > 0">
-  <div>
-    <label>Input Values:</label>
-    <ng-container *ngFor="let input of inputValues; let i = index; trackBy: trackByFn">
-      <input type="text" [(ngModel)]="inputValues[i]" />
-    </ng-container>
-  </div>
+  <label>Input Values:</label>
+  <ng-container *ngFor="let input of inputValues; let i = index; trackBy: trackByFn">
+    <input type="text" [(ngModel)]="inputValues[i]" />
+  </ng-container>
 
   <label for="sortOrder">Sort Order:</label>
 
@@ -22,5 +18,4 @@
       <mat-option value="desc">Descending</mat-option>
     </mat-select>
   </mat-form-field>
-  <!-- <button (click)="sortValues()">Sort Values</button> -->
 </ng-container>

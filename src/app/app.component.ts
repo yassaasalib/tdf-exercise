@@ -1,5 +1,3 @@
-// src/app/app.component.ts
-
 import { Component } from '@angular/core';
 import { SortService } from './sort.service';
 
@@ -27,7 +25,7 @@ export class AppComponent {
     }
   }
 
-  trackByFn(index: any, item: any): any {
+  trackByFn(index: any): any {
     return index;
   }
 }
